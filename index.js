@@ -1,7 +1,7 @@
 import express from "express";
 
 const app = express();
-// let port = process.env.PORT || 3000;
+// let port = process.env.PORT_FOR_ROUTE || 3000;
 let port = 3000;
 
 app.get("/api/users", (req, res, next) => {
@@ -25,7 +25,9 @@ app.get("/api/users", (req, res, next) => {
   ]);
 });
 
-app.get("/api", (req, res) => res.status(200).send("Hello World!"));
+app.get("/", (req, res) => res.status(200).send("Hello World! Welcome to my API hosting platform :)"));
+A
+app.get("/api", (req, res) => res.status(200).send("Hello World! This is API route"));
 
 app.listen(port, () => {
   console.log(`Listening on server ${port}`);
