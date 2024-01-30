@@ -26,7 +26,7 @@ app.get("/api/users", (req, res, next) => {
 });
 
 app.get("/", (req, res) => res.status(200).send("Hello World! Welcome to my API hosting platform :)"));
-A
+
 app.get("/api", (req, res) => res.status(200).send("Hello World! This is API route"));
 
 app.listen(port, () => {
