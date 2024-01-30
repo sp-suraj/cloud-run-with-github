@@ -12,7 +12,7 @@ app.get("/api/users", (req, res, next) => {
     },
     {
       id: 2,
-      name: "Vishal",
+      name: "Susindra Priya",
     },
     {
       id: 3,
