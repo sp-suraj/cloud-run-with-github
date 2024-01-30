@@ -1,11 +1,13 @@
-FROM node:12.16-alpine
+FROM node:19-alpine
 
-RUN mkdir node
-COPY . ./node
-WORKDIR /node/
+WORKDIR /app
+
+COPY package*.json ./
 
 RUN npm install
 
-EXPOSE 3000
+COPY . .
 
-CMD node index.js
+# EXPOSE 3000
+
+CMD [ "node", "index.js" ]
